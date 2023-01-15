@@ -1,0 +1,29 @@
+{
+    "name": "Slack-techcare",
+    "description": "Changes the colours of chats with a checkmark to green, ",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.slack.com/*"
+            ],
+            "js": [
+                "background.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_32.png",
+        "48": "images/icon_48.png",
+        "128": "images/icon_128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "addon@example.com",
+            "strict_min_version": "42.0"
+        }
+    }
+}
