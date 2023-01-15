@@ -9,7 +9,9 @@ function green(element, type) {
             break;
         case 1:
             element.closest(".c-message_kit__gutter").style.background = "#00800036";
-
+            break;
+        default:
+            console.log("Not implemented yet")
     }
 };
 function colourchange() {
