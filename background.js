@@ -1,7 +1,3 @@
-// for domchange thing:
-// class
-// p - workspace - layout
-
 function green(element, type) {
     switch (type) {
         case 0:
@@ -19,7 +15,21 @@ function colourchange() {
     l.forEach(function (currentValue) {
         green(currentValue, 0);
     });
-
-    setTimeout(colourchange, 1000);
 }
-colourchange();
+
+function callback(mutationList) {
+    mutationList.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+            console.log("childlist change")
+            colourchange()
+        }
+    })
+}
+
+var mList = document.querySelector('.p-workspace-layout')
+options = {
+    childList: true,
+    subtree: true
+}
+const observer = new MutationObserver(callback)
+observer.observe(mList, options)
