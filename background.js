@@ -20,7 +20,6 @@ function colourchange() {
 function callback(mutationList) {
     mutationList.forEach((mutation) => {
         if (mutation.type === 'childList') {
-            console.log("childlist change")
             colourchange()
         }
     })
@@ -32,4 +31,4 @@ options = {
     subtree: true
 }
 const observer = new MutationObserver(callback)
-observer.observe(mList, options)
+observer.observe(mList, options) 
