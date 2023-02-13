@@ -1,9 +1,11 @@
 {
     "name": "Slack-techcare",
-    "description": "Changes the colours of chats with a checkmark to green, ",
+    "description": "Changes the colours of chats with a checkmark to green",
     "version": "1.0",
-    "manifest_version": 2,
-    "permissions": [],
+    "manifest_version": 3,
+    "permissions": [
+        "https://app.slack.com/*"
+    ],
     "content_scripts": [
         {
             "matches": [
@@ -22,8 +24,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "addon@example.com",
-            "strict_min_version": "42.0"
+            "id": "techcare@slack.com"
         }
     }
 }

@@ -1,34 +1,31 @@
-function green(element, type) {
-    switch (type) {
-        case 0:
-            element.closest(".c-message_kit__gutter").style.background = "#00800036";
-            break;
-        case 1:
-            element.closest(".c-message_kit__gutter").style.background = "#00800036";
-            break;
-        default:
-            console.log("Not implemented yet")
-    }
-};
-function colourchange() {
-    var l = document.querySelectorAll('[alt=":white_check_mark:"]');
-    l.forEach(function (currentValue) {
-        green(currentValue, 0);
+function sGB() {
+    var gEs = document.querySelectorAll('.c-message_kit__gutter');
+    gEs.forEach(function (gE) {
+        var cME = gE.querySelector('img[alt=":white_check_mark:"]');
+        if (cME) {
+            gE.style.backgroundColor = "#00800036";
+        }
     });
 }
 
-function callback(mutationList) {
-    mutationList.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-            colourchange()
-        }
+function startObserver() {
+    var mList = document.querySelector('.p-workspace-layout')
+    if (!mList) { return; }
+    
+    options = {
+        childList: true,
+        subtree: true
+    }
+    observer = new MutationObserver(function (mL) {
+        mL.forEach((mut) => {
+            if (mut.type === 'childList') {
+                sGB()
+            }
+        })
     })
+    observer.observe(mList, options)
 }
 
-var mList = document.querySelector('.p-workspace-layout')
-options = {
-    childList: true,
-    subtree: true
-}
-const observer = new MutationObserver(callback)
-observer.observe(mList, options) 
+
+startObserver();
+setInterval(startObserver, 1000);
