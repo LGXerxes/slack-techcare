@@ -3,13 +3,10 @@
     "description": "Changes the colours of chats with a checkmark to green",
     "version": "1.2",
     "manifest_version": 3,
-    "permissions": [
-        "https://app.slack.com/*"
-    ],
     "content_scripts": [
         {
             "matches": [
-                "https://app.slack.com/"
+                "https://app.slack.com/*"
             ],
             "js": [
                 "background.js"
