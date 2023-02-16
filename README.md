@@ -1,6 +1,6 @@
 # slack-techcare
 
-Simple listener to change chat colour on a slack chat.
+Checks every 1.2 seconds which messages needs colouring and does el colouring.
 
 # Todo:
 
