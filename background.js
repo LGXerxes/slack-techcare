@@ -1,5 +1,4 @@
 setInterval(ch, 1200);
-
 function ch() {
     channelname = document.querySelector(".p-view_header__channel_title.p-view_header__truncated_text")
     if (!channelname) {
