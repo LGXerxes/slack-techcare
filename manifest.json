@@ -2,6 +2,7 @@
     "name": "Slack-techcare",
     "description": "Changes the colours of chats with a checkmark to green",
     "version": "1.2.2",
+    "version_name": "standard",
     "manifest_version": 3,
     "content_scripts": [
         {
