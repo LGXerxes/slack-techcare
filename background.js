@@ -3,11 +3,7 @@ function ch() {
     if (!channelname) {
         return
     }
-    console.debug(channelname.textContent)
-    console.debug(channelname.textContent == "tech-care")
-
     if (channelname.textContent == "tech-care") {
-        console.log("was tech-care")
         var l = document.querySelectorAll('[alt=":white_check_mark:"]');
         l.forEach(function (el) {
             el.closest(".c-message_kit__gutter").style.background = "#00800036";
