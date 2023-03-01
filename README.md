@@ -2,6 +2,8 @@
 
 Checks every 1.2 seconds which messages needs colouring and does el colouring.
 
+Makes `APL-XX` code blocks linkable to linear.app
+
 # Todo:
 
 - multiple options of emoji
